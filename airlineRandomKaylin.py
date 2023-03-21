@@ -21,11 +21,13 @@ def main():
     for i in (1,5):
 
         values = [str("%05d" % random.randint(0,999999999)), fake.airline()]
-        query = f"INSERT INTO airlines () VALUES ()" + ",".join(values)
+        query = f"INSERT INTO airlines (ein, name) VALUES ()" + ','.join(values)
         # print test query
         print(query)
-        # make every 3 minutes
+        # every 3 minutes
         time.sleep(5)
 
 if (__name__=="__main__"):
     main()
+
+
