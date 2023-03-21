@@ -27,7 +27,13 @@ def main():
     #and get the air travel section of the faker library
     fake = Faker()
     fake.add_provider(AirTravelProvider)
+    
     status= ["Awaiting", "Boarding", "Departing", "InFlight - OnTime", "InFlight - Late", "Landed - On Time", "Landed - Late", "Cancelled", "Delayed", "Unknown"]
+    
+    #Rose Coluzzi 
+    passengerX = passengerDB.read()
+    crewX = crewDB.read()
+    aircraftX = aircraftDB.read()
     
     for i in range(1,5):
         #Sabrina Reese
