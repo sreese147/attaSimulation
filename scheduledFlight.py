@@ -10,6 +10,14 @@ from faker_airtravel import AirTravelProvider
 import sqlite3
 import mysql.connector
 
+#Rose Coluzzi 
+from TableControllers.FlightTable import FlightTable
+from TableControllers.AirlineTable import AirlineTable
+from TableControllers.PassengerTable import PassengerTable
+from TableControllers.CrewTable import CrewTable
+from TableControllers.ScheduledFlightTable import ScheduledFlightTable
+# Utilities
+from TableOptions import TableOptions 
 
 
 def main():
