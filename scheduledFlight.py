@@ -38,7 +38,7 @@ def main():
     for i in range(1,5):
         #Sabrina Reese
         #insert sql rec
-        query = """INSERT INTO scheduled_flights (ein, status, departureField, arrivalField, distance, scheduled_departure, scheduled_arrival, passengers, crew,aircraft) VALUES ({0}, '{1}', '{2}','{3}',{4}, '{5}', '{6}','Foreign key passengers', 'fk crew', 'fk aircraft')""".format((random.randint(0,9999)),str(random.choice(status)), fake.airport_icao(),fake.airport_icao(),  random.randint(0,9999),str(fake.past_datetime()), str(fake.past_datetime()))
+        query = """INSERT INTO scheduled_flights (ein, status, departureField, arrivalField, distance, scheduled_departure, scheduled_arrival, passengers, crew,aircraft) VALUES ({0}, '{1}', '{2}','{3}',{4}, '{5}', '{6}','{7}', '{8}', '{9}')""".format((random.randint(0,9999)),str(random.choice(status)), fake.airport_icao(),fake.airport_icao(),  random.randint(0,9999),str(fake.past_datetime()), str(fake.past_datetime()), str(passengerX[0][3]), str(crewX[0][3]), str(aircraftX[0][3]))
         cursor.execute(query)
         connection.commit()
         cursorFetch = cursor.execute("SELECT * FROM scheduled_flights ORDER BY id DESC;")
