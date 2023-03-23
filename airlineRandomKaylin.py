@@ -4,21 +4,21 @@ sprint 2
 random entry into airline
 '''
 
-#libraries
+# libraries
 import sqlite3
 import time
 import random
 from faker import Faker
 from faker_airtravel import AirTravelProvider
 
-#airline
-#ein (INT), airline name (TEXT)
+# airline
+# ein (INT), airline name (TEXT)
 
 def main():
     fake = Faker()
     fake.add_provider(AirTravelProvider)
 
-
+    # test print 5 times
     for i in range(1,5):
 
         values = [str("%05d" % random.randint(0,999999999)), "'" + fake.airline()+ "'"]
