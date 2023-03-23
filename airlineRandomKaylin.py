@@ -19,7 +19,7 @@ def main():
     fake.add_provider(AirTravelProvider)
 
 
-    for i in (1,5):
+    for i in range(1,5):
 
         values = [str("%05d" % random.randint(0,999999999)), fake.airline()]
         query = f"INSERT INTO airlines (ein, name) VALUES (" + ','.join(values) + ")"
