@@ -22,7 +22,7 @@ def main():
     for i in range(1,5):
 
         values = [str("%05d" % random.randint(0,999999999)), fake.airline()]
-        query = f"INSERT INTO airlines (ein, name) VALUES (" + ','.join(values) + ")"
+        query = f"INSERT INTO airlines (ein, name) VALUES ('" + ','.join(values) + "')"
         # print test query
         print(query)
         # every 3 minutes
